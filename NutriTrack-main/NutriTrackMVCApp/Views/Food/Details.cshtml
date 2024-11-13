@@ -1,0 +1,27 @@
+﻿@model NutriTrackMVCApp.Models.Food
+
+@{
+    ViewData["Title"] = "Food Details";
+}
+
+<div class="container my-4">
+    <h2>@Model.Name</h2>
+    <img src="@Model.ImageURL" alt="@Model.Name" class="img-fluid mb-4" style="max-height: 300px; object-fit: cover;">
+
+    <p><strong>Price:</strong> @Model.Price NOK</p>
+    <p><strong>Weight:</strong> @Model.Weight g</p>
+    
+    <h4>Nutritional Information (per 100g)</h4>
+    <ul class="list-group mb-4">
+        <li class="list-group-item"><strong>Energy:</strong> @Model.Energy kcal</li>
+        <li class="list-group-item"><strong>Fat:</strong> @Model.Fat g</li>
+        <li class="list-group-item"><strong>Saturated Fat:</strong> @Model.SaturatedFat g</li>
+        <li class="list-group-item"><strong>Carbohydrates:</strong> @Model.Carbohydrates g</li>
+        <li class="list-group-item"><strong>Sugar:</strong> @Model.Sugar g</li>
+        <li class="list-group-item"><strong>Protein:</strong> @Model.Protein g</li>
+        <li class="list-group-item"><strong>Salt:</strong> @Model.Salt g</li>
+    </ul>
+
+    <a asp-action="Index" class="btn btn-secondary">Back to Food List</a>
+</div>
+
